@@ -192,26 +192,21 @@ h1, h2, h3, .brand, .section-title, .about-text h2, .timeline-year, .loading-bra
 }
 .bg-photo {
   position: absolute;
-  inset: -5%;
+  inset: 0;
   background-size: cover;
   background-position: center;
   z-index: 0;
 }
-.bg-photo.hero-zoom {
-  animation: heroZoom 28s ease-in-out infinite alternate;
-}
+/* Removed hero-zoom animation to show full images */
+
 .bg-video {
   position: absolute;
-  inset: -5%;
-  width: 110%;
-  height: 110%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center;
   z-index: 0;
-}
-@keyframes heroZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.12); }
 }
 
 /* Background soft overlay for text readability */
