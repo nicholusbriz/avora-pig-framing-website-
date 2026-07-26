@@ -34,7 +34,8 @@
   <!-- ===== HEADER ===== -->
   <header class="main-header">
     <div class="bg-photo-wrap">
-      <div class="bg-photo hero-zoom" style="background-image: url('images/pig1.jpg');"></div>
+      <!-- Removed hero-zoom class to prevent zooming -->
+      <div class="bg-photo" style="background-image: url('images/pig1.jpg');"></div>
     </div>
     <div class="header-overlay"></div>
     <div class="particles" id="particles"></div>
@@ -111,8 +112,46 @@
       </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
-    <section id="services" class="section-card alt-bg" aria-labelledby="services-heading">
+    <!-- ===== JOURNEY / TIMELINE ===== -->
+    <section id="journey" class="section-card timeline-section timeline-media">
+      <div class="bg-photo-wrap">
+        <div class="bg-photo" style="background-image: url('images/pig6.jpg');"></div>
+      </div>
+      <div class="media-overlay"></div>
+      <div class="container">
+        <span class="section-badge" data-reveal="up">How We Got Here</span>
+        <h2 id="journey-heading" class="section-title" data-reveal="up"><i class="fas fa-road" aria-hidden="true"></i> Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-year">2018</span>
+            <h4>A single sty, two sows</h4>
+            <p>AVORA started small — a family plot, two breeding sows, and a plan to do things properly from day one.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2020</span>
+            <h4>Land, water, and room to grow</h4>
+            <p>We expanded onto 10 acres of pasture and installed clean, reliable water for the herd year-round.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2022</span>
+            <h4>Recognised across the district</h4>
+            <p>Our breeding stock and piglet health protocols earned recognition from local agricultural bodies.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2026</span>
+            <h4>200+ pigs, one standard</h4>
+            <p>Today AVORA supplies piglets and breeding genetics to farmers across Kamuli and beyond — same standard as sow number one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES - FIXED: Now uses timeline-media ===== -->
+    <section id="services" class="section-card timeline-media" aria-labelledby="services-heading">
+      <div class="bg-photo-wrap">
+        <div class="bg-photo" style="background-image: url('images/pig2.jpg');"></div>
+      </div>
+      <div class="media-overlay"></div>
       <div class="container">
         <span class="section-badge" data-reveal="up">What We Offer</span>
         <h2 class="section-title" data-reveal="up"><i class="fas fa-concierge-bell" aria-hidden="true"></i> Our Services</h2>
@@ -202,38 +241,17 @@
       </div>
     </section>
 
-    <!-- ===== WHY CHOOSE US ===== -->
-    <section id="why" class="section-card alt-bg">
-      <div class="container">
-        <span class="section-badge" data-reveal="up">Why Choose Us</span>
-        <h2 class="section-title" data-reveal="up"><i class="fas fa-star" aria-hidden="true"></i> Why Choose AVORA Pig Farming?</h2>
-        <div class="why-grid">
-          <div class="why-item">
-            <i class="fas fa-heartbeat"></i>
-            <h4>Healthy & Disease-Free</h4>
-            <p>All our pigs are raised with the highest health standards.</p>
-          </div>
-          <div class="why-item">
-            <i class="fas fa-apple-alt"></i>
-            <h4>Good Feeding & Nutrition</h4>
-            <p>Proper nutrition for optimal growth and health.</p>
-          </div>
-          <div class="why-item">
-            <i class="fas fa-leaf"></i>
-            <h4>Clean & Safe Environment</h4>
-            <p>Modern, clean facilities for happy pigs.</p>
-          </div>
-          <div class="why-item">
-            <i class="fas fa-recycle"></i>
-            <h4>Modern & Sustainable</h4>
-            <p>Environmentally responsible farming practices.</p>
-          </div>
-          <div class="why-item">
-            <i class="fas fa-smile"></i>
-            <h4>Customer Satisfaction</h4>
-            <p>Your success is our success. We're here to help.</p>
-          </div>
-        </div>
+    <!-- ===== VISIT BANNER ===== -->
+    <section class="section-card farm-banner">
+      <div class="bg-photo-wrap">
+        <div class="bg-photo hero-zoom" style="background-image: url('images/pig5.jpg');"></div>
+      </div>
+      <div class="banner-overlay"></div>
+      <div class="container banner-content" data-reveal="zoom">
+        <span class="section-badge">Come See For Yourself</span>
+        <h2>Open pasture. Open gate.</h2>
+        <p>We'd rather show you than tell you. Walk the pens, meet the sows, and see exactly how your next piglet is being raised — no appointment needed during opening hours.</p>
+        <a href="#contact" class="btn-primary"><i class="fas fa-map-marker-alt"></i> Plan a Visit</a>
       </div>
     </section>
 
@@ -255,8 +273,44 @@
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
-    <section id="faq" class="section-card alt-bg" aria-labelledby="faq-heading">
+    <!-- ===== TESTIMONIAL ===== -->
+    <section class="section-card testimonial-bg">
+      <div class="bg-photo-wrap">
+        <div class="bg-photo" style="background-image: url('images/pig8.jpg');"></div>
+      </div>
+      <div class="testimonial-overlay"></div>
+      <div class="container testimonial-container">
+        <i class="fas fa-quote-left quote-icon"></i>
+        <div class="testimonial-viewport">
+          <div class="testimonial-track">
+            <div class="testimonial-slide">
+              <blockquote>AVORA has transformed pig farming in our community. Their piglets are healthy, and their breeding advice has doubled our production.</blockquote>
+              <cite>— Mr. Ssempijja, Kamuli District Farmer</cite>
+            </div>
+            <div class="testimonial-slide">
+              <blockquote>I've bought piglets from three different farms. AVORA's are the only ones that never got sick on me in the first month.</blockquote>
+              <cite>— Mrs. Nakirya, Namasagali</cite>
+            </div>
+            <div class="testimonial-slide">
+              <blockquote>The training session alone was worth the trip. I changed how I feed my sows and saw the difference within weeks.</blockquote>
+              <cite>— Mr. Waiswa, Bugulumbya</cite>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <button class="dot-btn active" aria-label="Testimonial 1"></button>
+          <button class="dot-btn" aria-label="Testimonial 2"></button>
+          <button class="dot-btn" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ - FIXED: Now uses timeline-media ===== -->
+    <section id="faq" class="section-card timeline-media" aria-labelledby="faq-heading">
+      <div class="bg-photo-wrap">
+        <div class="bg-photo" style="background-image: url('images/pig7.jpg');"></div>
+      </div>
+      <div class="media-overlay"></div>
       <div class="container">
         <span class="section-badge" data-reveal="up">Common Questions</span>
         <h2 class="section-title" data-reveal="up"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
