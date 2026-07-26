@@ -2,184 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AVORA PIG FARMING · Kamuli, Uganda</title>
-  <meta name="description" content="AVORA PIG FARMING — family-owned, pasture-raised pig breeding and piglet sales in Kamuli District, Uganda. Healthy stock, ethical care, trusted for 8 years." />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>AVORA Pig Farming · Premium Piglets &amp; Breeding · Kamuli, Uganda</title>
+  <meta name="description" content="AVORA Pig Farming — family-owned, pasture-raised pig breeding, piglet sales and farmer training in Kamuli District, Uganda. Healthy stock, ethical care, trusted since 2018." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Skip Navigation for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ===== LOADING SCREEN ===== -->
   <div id="loading-screen">
     <div class="loading-icon"><i class="fas fa-piggy-bank"></i></div>
     <div class="loading-brand">AVORA</div>
-    <div class="loading-sub">Pig Farming · Kamuli</div>
+    <div class="loading-sub">Pig Farming · Kamuli, Uganda</div>
     <div class="loading-bar-track"><div class="loading-bar-fill" id="loading-bar-fill"></div></div>
   </div>
 
   <!-- ===== SCROLL PROGRESS ===== -->
   <div class="scroll-progress"><div class="scroll-progress-fill" id="scroll-progress-fill"></div></div>
-  <div class="scroll-progress-pig" id="scroll-progress-pig">🐖</div>
-  
-  <!-- ===== BACK TO TOP BUTTON ===== -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-  <!-- ===== HEADER ===== -->
-  <header class="main-header">
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <span><i class="fas fa-globe-africa"></i> Kamuli District · Uganda</span>
+    <span class="sep">|</span>
+    <span><i class="fas fa-truck"></i> District-wide delivery</span>
+    <span class="sep">|</span>
+    <a href="tel:+256743804940"><i class="fas fa-phone"></i> +256 743 804 940</a>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="glass-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <a class="nav-brand" href="#top"><i class="fas fa-piggy-bank"></i> AVORA</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about"><span class="link-text">About</span></a>
+      <a href="#services"><span class="link-text">Services</span></a>
+      <a href="#pricing"><span class="link-text">Pigs For Sale</span></a>
+      <a href="#gallery"><span class="link-text">Gallery</span></a>
+      <a href="#journey"><span class="link-text">Journey</span></a>
+      <a href="#faq"><span class="link-text">FAQ</span></a>
+      <a href="#contact"><span class="link-text">Contact</span></a>
+      <a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="whatsapp-nav"><i class="fab fa-whatsapp"></i> <span class="link-text">WhatsApp</span></a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="main-header" id="top">
     <div class="bg-photo-wrap">
-      <!-- Removed hero-zoom class to prevent zooming -->
-      <div class="bg-photo" style="background-image: url('images/pig1.jpg');"></div>
+      <div class="bg-photo" style="background-image:url('images/pig1.jpg');"></div>
     </div>
     <div class="header-overlay"></div>
-    <div class="particles" id="particles"></div>
     <div class="header-content">
-      <div class="brand-badge">
-        <i class="fas fa-piggy-bank"></i>
-      </div>
+      <div class="brand-badge"><i class="fas fa-piggy-bank"></i></div>
+      <span class="eyebrow">Est. 2018 · Family owned · Pasture raised</span>
       <h1 class="brand">AVORA <span>Pig Farming</span></h1>
       <p class="tagline">Healthy Pigs. Better Farming. Greater Future.</p>
       <div class="header-cta">
-        <a href="https://wa.me/256743804940" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        <a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
         <a href="#pricing" class="btn-secondary"><i class="fas fa-paw"></i> View Our Pigs</a>
       </div>
+      <div class="hero-meta">
+        <div><strong>200+</strong><span>pigs on farm</span></div>
+        <div><strong>8</strong><span>years trusted</span></div>
+        <div><strong>10</strong><span>acres pasture</span></div>
+      </div>
     </div>
+    <a href="#trust" class="scroll-cue" aria-label="Scroll down"><span></span></a>
     <div class="header-wave">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0,20 C300,60 600,0 900,30 C1200,60 1400,10 1440,30 L1440,60 L0,60 Z" fill="#f8f9fa" opacity="1"></path>
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,20 C300,60 600,0 900,30 C1200,60 1400,10 1440,30 L1440,60 L0,60 Z"></path>
       </svg>
     </div>
   </header>
 
-  <!-- ===== MARQUEE ===== -->
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>Premium Piglets</span><span class="dot">•</span>
-      <span>Pasture-Raised</span><span class="dot">•</span>
-      <span>Breeding Services</span><span class="dot">•</span>
-      <span>Farmer Training</span><span class="dot">•</span>
-      <span>District-Wide Delivery</span><span class="dot">•</span>
-      <span>Premium Piglets</span><span class="dot">•</span>
-      <span>Pasture-Raised</span><span class="dot">•</span>
-      <span>Breeding Services</span><span class="dot">•</span>
-      <span>Farmer Training</span><span class="dot">•</span>
-      <span>District-Wide Delivery</span><span class="dot">•</span>
-    </div>
-  </div>
-
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="glass-nav" role="navigation" aria-label="Main navigation">
-    <a href="#about"><i class="fas fa-info-circle" aria-hidden="true"></i> <span class="link-text">About</span></a>
-    <a href="#services"><i class="fas fa-concierge-bell" aria-hidden="true"></i> <span class="link-text">Services</span></a>
-    <a href="#pricing"><i class="fas fa-tags" aria-hidden="true"></i> <span class="link-text">Pigs For Sale</span></a>
-    <a href="#gallery"><i class="fas fa-images" aria-hidden="true"></i> <span class="link-text">Gallery</span></a>
-    <a href="#faq"><i class="fas fa-question-circle" aria-hidden="true"></i> <span class="link-text">FAQ</span></a>
-    <a href="#contact"><i class="fas fa-phone-alt" aria-hidden="true"></i> <span class="link-text">Contact</span></a>
-    <a href="https://wa.me/256743804940" target="_blank" class="whatsapp-nav"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span class="link-text">WhatsApp Us</span></a>
-  </nav>
-
-  <!-- ===== MAIN CONTENT ===== -->
   <main id="main-content">
 
+    <!-- ===== TRUST STRIP ===== -->
+    <section id="trust" class="trust-strip section-card">
+      <div class="container trust-grid">
+        <div class="trust-item"><i class="fas fa-syringe"></i><h4>Vaccinated &amp; Dewormed</h4><p>Every animal leaves with a written health record.</p></div>
+        <div class="trust-item"><i class="fas fa-dna"></i><h4>Proven Genetics</h4><p>Large White &amp; Landrace crosses bred for growth.</p></div>
+        <div class="trust-item"><i class="fas fa-truck-fast"></i><h4>Safe Transport</h4><p>Low-stress delivery across Kamuli and beyond.</p></div>
+        <div class="trust-item"><i class="fas fa-headset"></i><h4>After-Sale Support</h4><p>Free guidance through your first month.</p></div>
+      </div>
+    </section>
+
     <!-- ===== ABOUT ===== -->
-    <section id="about" class="section-card">
+    <section id="about" class="section-card" aria-labelledby="about-heading">
       <div class="container">
         <div class="about-grid">
-          <div class="about-text" data-reveal="left">
+          <div class="about-text">
             <span class="section-badge">About Us</span>
             <h2 id="about-heading">Our Passion. <span class="highlight">Your Success.</span></h2>
-            <p class="lead">AVORA PIG FARMING is a modern pig farm located in <strong>Kamuli District, Uganda</strong>. We specialize in breeding and raising strong, disease-free pigs that give better growth and high returns.</p>
-            <p>Our goal is to support farmers and customers by providing quality pigs, reliable information and excellent customer service.</p>
+            <p class="lead"><strong>AVORA Pig Farming</strong> is a modern pig farm in <strong>Kamuli District, Uganda</strong>, breeding strong, disease-free pigs that deliver better growth and higher returns.</p>
+            <p>We support farmers and customers with quality stock, reliable information and genuinely excellent service — the same standard we set with our first two sows in 2018.</p>
             <div class="about-features">
               <span><i class="fas fa-check-circle"></i> Quality Breeds</span>
-              <span><i class="fas fa-shield-alt"></i> Healthy & Strong</span>
+              <span><i class="fas fa-shield-alt"></i> Healthy &amp; Strong</span>
               <span><i class="fas fa-hand-holding-heart"></i> Farmer Support</span>
             </div>
+            <a href="#contact" class="btn-primary small"><i class="fas fa-map-marker-alt"></i> Plan a Visit</a>
           </div>
-          <div class="about-stats" data-reveal="zoom">
-            <div class="stat-item"><i class="fas fa-paw"></i> <span class="stat-number" data-target="200">0</span> <small>happy pigs</small></div>
-            <div class="stat-item"><i class="fas fa-users"></i> <span class="stat-number" data-target="15">0</span> <small>farm staff</small></div>
-            <div class="stat-item"><i class="fas fa-calendar-alt"></i> <span class="stat-number" data-target="8">0</span> <small>years trusted</small></div>
-            <div class="stat-item"><i class="fas fa-trophy"></i> <span class="stat-number" data-target="5">0</span> <small>awards won</small></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== JOURNEY / TIMELINE ===== -->
-    <section id="journey" class="section-card timeline-section timeline-media">
-      <div class="bg-photo-wrap">
-        <div class="bg-photo" style="background-image: url('images/pig6.jpg');"></div>
-      </div>
-      <div class="media-overlay"></div>
-      <div class="container">
-        <span class="section-badge" data-reveal="up">How We Got Here</span>
-        <h2 id="journey-heading" class="section-title" data-reveal="up"><i class="fas fa-road" aria-hidden="true"></i> Our Journey</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-year">2018</span>
-            <h4>A single sty, two sows</h4>
-            <p>AVORA started small — a family plot, two breeding sows, and a plan to do things properly from day one.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2020</span>
-            <h4>Land, water, and room to grow</h4>
-            <p>We expanded onto 10 acres of pasture and installed clean, reliable water for the herd year-round.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2022</span>
-            <h4>Recognised across the district</h4>
-            <p>Our breeding stock and piglet health protocols earned recognition from local agricultural bodies.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2026</span>
-            <h4>200+ pigs, one standard</h4>
-            <p>Today AVORA supplies piglets and breeding genetics to farmers across Kamuli and beyond — same standard as sow number one.</p>
+          <div class="about-stats">
+            <div class="stat-item"><i class="fas fa-paw"></i><span class="stat-number" data-target="200">0</span><small>happy pigs</small></div>
+            <div class="stat-item"><i class="fas fa-users"></i><span class="stat-number" data-target="15">0</span><small>farm staff</small></div>
+            <div class="stat-item"><i class="fas fa-calendar-alt"></i><span class="stat-number" data-target="8">0</span><small>years trusted</small></div>
+            <div class="stat-item"><i class="fas fa-trophy"></i><span class="stat-number" data-target="5">0</span><small>awards won</small></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== SERVICES - FIXED: Now uses timeline-media ===== -->
-    <section id="services" class="section-card timeline-media" aria-labelledby="services-heading">
-      <div class="bg-photo-wrap">
-        <div class="bg-photo" style="background-image: url('images/pig2.jpg');"></div>
-      </div>
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section-card timeline-media section-bg-soft" aria-labelledby="services-heading">
+      <div class="bg-photo-wrap"><div class="bg-photo" style="background-image:url('images/pig2.jpg');"></div></div>
       <div class="media-overlay"></div>
       <div class="container">
-        <span class="section-badge" data-reveal="up">What We Offer</span>
-        <h2 class="section-title" data-reveal="up"><i class="fas fa-concierge-bell" aria-hidden="true"></i> Our Services</h2>
+        <span class="section-badge">What We Offer</span>
+        <h2 id="services-heading" class="section-title">Our Services</h2>
+        <p class="section-sub">Four ways we help farmers build a herd that pays.</p>
         <div class="service-grid">
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
-            <h3>Pig Breeding</h3>
-            <p>We breed high quality pigs for better growth, reproduction and high productivity.</p>
-            <a href="#contact" class="service-link">Learn More →</a>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-baby"></i></div>
-            <h3>Piglet Sales</h3>
-            <p>We sell healthy piglets from good bloodlines at affordable prices.</p>
-            <a href="#contact" class="service-link">Learn More →</a>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
-            <h3>Boar Services</h3>
-            <p>Strong and proven boars available for natural mating services.</p>
-            <a href="#contact" class="service-link">Learn More →</a>
-          </div>
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-            <h3>Farming Advice</h3>
-            <p>We offer guidance on pig management, feeding, housing and health care.</p>
-            <a href="#contact" class="service-link">Learn More →</a>
-          </div>
+          <article class="service-card"><div class="service-icon"><i class="fas fa-piggy-bank"></i></div><h3>Pig Breeding</h3><p>High-quality breeding stock selected for growth, fertility and productivity.</p><a href="#contact" class="service-link">Learn More →</a></article>
+          <article class="service-card"><div class="service-icon"><i class="fas fa-baby"></i></div><h3>Piglet Sales</h3><p>Healthy weaned piglets from strong bloodlines at fair, transparent prices.</p><a href="#pricing" class="service-link">Learn More →</a></article>
+          <article class="service-card"><div class="service-icon"><i class="fas fa-heartbeat"></i></div><h3>Boar Services</h3><p>Proven, fertile boars available for natural mating services.</p><a href="#contact" class="service-link">Learn More →</a></article>
+          <article class="service-card"><div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div><h3>Farming Advice</h3><p>Hands-on guidance on management, feeding, housing and animal health.</p><a href="#contact" class="service-link">Learn More →</a></article>
         </div>
       </div>
     </section>
@@ -187,67 +138,24 @@
     <!-- ===== PRICING / PIGS FOR SALE ===== -->
     <section id="pricing" class="section-card" aria-labelledby="pricing-heading">
       <div class="container">
-        <span class="section-badge" data-reveal="up">Pigs For Sale</span>
-        <h2 class="section-title" data-reveal="up"><i class="fas fa-tags" aria-hidden="true"></i> Pigs For Sale</h2>
-        <p style="text-align:center;color:#4a4a5a;margin-bottom:2rem;">We provide different types of pigs to meet your needs. Contact us for current availability and prices.</p>
+        <span class="section-badge">Available Now</span>
+        <h2 id="pricing-heading" class="section-title">Pigs For Sale</h2>
+        <p class="section-sub">Message us on WhatsApp for live pricing and availability.</p>
         <div class="pricing-grid">
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Piglets</h3>
-              <div class="price"><i class="fas fa-whatsapp" style="font-size:1.2rem;color:#25D366;"></i> Contact Us</div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> Healthy weaned piglets</li>
-              <li><i class="fas fa-check"></i> 8 – 12 weeks old</li>
-            </ul>
-            <a href="https://wa.me/256743804940" target="_blank" class="btn-primary">Chat on WhatsApp</a>
-          </div>
-          <div class="pricing-card featured">
-            <div class="featured-badge">Popular</div>
-            <div class="pricing-header">
-              <h3>Growers</h3>
-              <div class="price"><i class="fas fa-whatsapp" style="font-size:1.2rem;color:#25D366;"></i> Contact Us</div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> Well nourished growers</li>
-              <li><i class="fas fa-check"></i> 3 – 6 months old</li>
-            </ul>
-            <a href="https://wa.me/256743804940" target="_blank" class="btn-primary">Chat on WhatsApp</a>
-          </div>
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Finishers</h3>
-              <div class="price"><i class="fas fa-whatsapp" style="font-size:1.2rem;color:#25D366;"></i> Contact Us</div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> Ready for finishing</li>
-              <li><i class="fas fa-check"></i> 6+ months old</li>
-            </ul>
-            <a href="https://wa.me/256743804940" target="_blank" class="btn-primary">Chat on WhatsApp</a>
-          </div>
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Boars</h3>
-              <div class="price"><i class="fas fa-whatsapp" style="font-size:1.2rem;color:#25D366;"></i> Contact Us</div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> Strong breeding boars</li>
-              <li><i class="fas fa-check"></i> Proven & fertile</li>
-            </ul>
-            <a href="https://wa.me/256743804940" target="_blank" class="btn-primary">Chat on WhatsApp</a>
-          </div>
+          <div class="pricing-card"><div class="pricing-header"><h3>Piglets</h3><div class="price"><i class="fab fa-whatsapp"></i> Contact Us</div></div><ul class="pricing-features"><li><i class="fas fa-check"></i> Healthy weaned piglets</li><li><i class="fas fa-check"></i> 8 – 12 weeks old</li><li><i class="fas fa-check"></i> Vaccinated &amp; dewormed</li></ul><a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="btn-primary">Chat on WhatsApp</a></div>
+          <div class="pricing-card featured"><div class="featured-badge">Most Popular</div><div class="pricing-header"><h3>Growers</h3><div class="price"><i class="fab fa-whatsapp"></i> Contact Us</div></div><ul class="pricing-features"><li><i class="fas fa-check"></i> Well-nourished growers</li><li><i class="fas fa-check"></i> 3 – 6 months old</li><li><i class="fas fa-check"></i> Steady daily weight gain</li></ul><a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="btn-primary">Chat on WhatsApp</a></div>
+          <div class="pricing-card"><div class="pricing-header"><h3>Finishers</h3><div class="price"><i class="fab fa-whatsapp"></i> Contact Us</div></div><ul class="pricing-features"><li><i class="fas fa-check"></i> Ready for finishing</li><li><i class="fas fa-check"></i> 6+ months old</li><li><i class="fas fa-check"></i> Market-weight ready</li></ul><a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="btn-primary">Chat on WhatsApp</a></div>
+          <div class="pricing-card"><div class="pricing-header"><h3>Boars</h3><div class="price"><i class="fab fa-whatsapp"></i> Contact Us</div></div><ul class="pricing-features"><li><i class="fas fa-check"></i> Strong breeding boars</li><li><i class="fas fa-check"></i> Proven &amp; fertile</li><li><i class="fas fa-check"></i> Service on farm</li></ul><a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="btn-primary">Chat on WhatsApp</a></div>
         </div>
-        <p class="pricing-note">* Contact us via WhatsApp for current pricing and availability.</p>
+        <p class="pricing-note">* Prices vary with age, weight and season. WhatsApp us for today's rate.</p>
       </div>
     </section>
 
     <!-- ===== VISIT BANNER ===== -->
-    <section class="section-card farm-banner">
-      <div class="bg-photo-wrap">
-        <div class="bg-photo hero-zoom" style="background-image: url('images/pig5.jpg');"></div>
-      </div>
+    <section class="section-card farm-banner section-bg-soft">
+      <div class="bg-photo-wrap"><div class="bg-photo" style="background-image:url('images/pig5.jpg');"></div></div>
       <div class="banner-overlay"></div>
-      <div class="container banner-content" data-reveal="zoom">
+      <div class="container banner-content">
         <span class="section-badge">Come See For Yourself</span>
         <h2>Open pasture. Open gate.</h2>
         <p>We'd rather show you than tell you. Walk the pens, meet the sows, and see exactly how your next piglet is being raised — no appointment needed during opening hours.</p>
@@ -258,43 +166,73 @@
     <!-- ===== GALLERY ===== -->
     <section id="gallery" class="section-card" aria-labelledby="gallery-heading">
       <div class="container">
-        <span class="section-badge" data-reveal="up">Our Farm</span>
-        <h2 class="section-title" data-reveal="up"><i class="fas fa-images"></i> Gallery</h2>
+        <span class="section-badge">Our Farm</span>
+        <h2 id="gallery-heading" class="section-title">Gallery</h2>
+        <p class="section-sub">A look at everyday life on the farm.</p>
         <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/pig1.jpg" alt="AVORA pigs on open pasture" loading="lazy" /><div class="gallery-overlay"><span>Open Pasture</span></div></div>
-          <div class="gallery-item"><img src="images/pig2.jpg" alt="AVORA piglets" loading="lazy" /><div class="gallery-overlay"><span>New Piglets</span></div></div>
-          <div class="gallery-item"><img src="images/pig3.jpg" alt="AVORA feeding time" loading="lazy" /><div class="gallery-overlay"><span>Feeding Time</span></div></div>
-          <div class="gallery-item"><img src="images/pig4.jpg" alt="AVORA clean water troughs" loading="lazy" /><div class="gallery-overlay"><span>Clean Water</span></div></div>
-          <div class="gallery-item"><img src="images/pig5.jpg" alt="AVORA breeding sows" loading="lazy" /><div class="gallery-overlay"><span>Breeding Sows</span></div></div>
-          <div class="gallery-item"><img src="images/pig6.jpg" alt="AVORA farm staff at work" loading="lazy" /><div class="gallery-overlay"><span>Our Team</span></div></div>
-          <div class="gallery-item"><img src="images/pig7.jpg" alt="AVORA farm at sunrise" loading="lazy" /><div class="gallery-overlay"><span>Sunrise Rounds</span></div></div>
-          <div class="gallery-item"><img src="images/pig8.jpg" alt="Healthy AVORA herd" loading="lazy" /><div class="gallery-overlay"><span>Healthy Herd</span></div></div>
+          <figure class="gallery-item">
+            <img src="images/pig1.jpg" alt="AVORA pigs on open pasture" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>Open Pasture</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/pig2.jpg" alt="AVORA piglets resting together" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>New Piglets</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/pig3.jpg" alt="Feeding time at AVORA farm" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>Feeding Time</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/pig4.jpg" alt="Clean water troughs at AVORA" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>Clean Water</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/pig5.jpg" alt="AVORA breeding sows" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>Breeding Sows</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/pig6.jpg" alt="AVORA farm staff at work" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>Our Team</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/pig7.jpg" alt="AVORA farm at sunrise" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>Sunrise Rounds</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/pig8.jpg" alt="Healthy AVORA herd" loading="lazy" />
+            <figcaption class="gallery-overlay"><span>Healthy Herd</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIAL ===== -->
-    <section class="section-card testimonial-bg">
-      <div class="bg-photo-wrap">
-        <div class="bg-photo" style="background-image: url('images/pig8.jpg');"></div>
+    <!-- ===== JOURNEY ===== -->
+    <section id="journey" class="section-card timeline-media section-bg-soft" aria-labelledby="journey-heading">
+      <div class="bg-photo-wrap"><div class="bg-photo" style="background-image:url('images/pig6.jpg');"></div></div>
+      <div class="media-overlay"></div>
+      <div class="container">
+        <span class="section-badge">How We Got Here</span>
+        <h2 id="journey-heading" class="section-title">Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-year">2018</span><h4>A single sty, two sows</h4><p>AVORA started small — a family plot, two breeding sows, and a plan to do things properly from day one.</p></div>
+          <div class="timeline-item"><span class="timeline-year">2020</span><h4>Land, water, and room to grow</h4><p>We expanded onto 10 acres of pasture and installed clean, reliable water for the herd year-round.</p></div>
+          <div class="timeline-item"><span class="timeline-year">2022</span><h4>Recognised across the district</h4><p>Our breeding stock and piglet health protocols earned recognition from local agricultural bodies.</p></div>
+          <div class="timeline-item"><span class="timeline-year">2026</span><h4>200+ pigs, one standard</h4><p>Today AVORA supplies piglets and genetics to farmers across Kamuli and beyond — same standard as sow number one.</p></div>
+        </div>
       </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section-card testimonial-bg section-bg-soft" aria-label="Customer testimonials">
+      <div class="bg-photo-wrap"><div class="bg-photo" style="background-image:url('images/pig8.jpg');"></div></div>
       <div class="testimonial-overlay"></div>
       <div class="container testimonial-container">
         <i class="fas fa-quote-left quote-icon"></i>
         <div class="testimonial-viewport">
           <div class="testimonial-track">
-            <div class="testimonial-slide">
-              <blockquote>AVORA has transformed pig farming in our community. Their piglets are healthy, and their breeding advice has doubled our production.</blockquote>
-              <cite>— Mr. Ssempijja, Kamuli District Farmer</cite>
-            </div>
-            <div class="testimonial-slide">
-              <blockquote>I've bought piglets from three different farms. AVORA's are the only ones that never got sick on me in the first month.</blockquote>
-              <cite>— Mrs. Nakirya, Namasagali</cite>
-            </div>
-            <div class="testimonial-slide">
-              <blockquote>The training session alone was worth the trip. I changed how I feed my sows and saw the difference within weeks.</blockquote>
-              <cite>— Mr. Waiswa, Bugulumbya</cite>
-            </div>
+            <div class="testimonial-slide"><blockquote>AVORA has transformed pig farming in our community. Their piglets are healthy, and their breeding advice has doubled our production.</blockquote><cite>— Mr. Ssempijja, Kamuli District Farmer</cite></div>
+            <div class="testimonial-slide"><blockquote>I've bought piglets from three different farms. AVORA's are the only ones that never got sick on me in the first month.</blockquote><cite>— Mrs. Nakirya, Namasagali</cite></div>
+            <div class="testimonial-slide"><blockquote>The training session alone was worth the trip. I changed how I feed my sows and saw the difference within weeks.</blockquote><cite>— Mr. Waiswa, Bugulumbya</cite></div>
           </div>
         </div>
         <div class="carousel-dots">
@@ -305,81 +243,29 @@
       </div>
     </section>
 
-    <!-- ===== FAQ - FIXED: Now uses timeline-media ===== -->
-    <section id="faq" class="section-card timeline-media" aria-labelledby="faq-heading">
-      <div class="bg-photo-wrap">
-        <div class="bg-photo" style="background-image: url('images/pig7.jpg');"></div>
-      </div>
-      <div class="media-overlay"></div>
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section-card" aria-labelledby="faq-heading">
       <div class="container">
-        <span class="section-badge" data-reveal="up">Common Questions</span>
-        <h2 class="section-title" data-reveal="up"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        <span class="section-badge">Common Questions</span>
+        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
         <div class="faq-grid">
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>What breeds of pigs do you raise?</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p>We primarily raise Large White and Landrace crosses, which are well-suited to Uganda's climate and known for their excellent growth rates and mothering abilities.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>At what age are piglets ready for sale?</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Our piglets are weaned at 8 weeks and ready for sale at 10-12 weeks old. By this age, they're fully vaccinated, dewormed, and eating solid feed independently.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Do you offer delivery services?</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Yes! We deliver across Kamuli District and neighbouring areas. Our team ensures safe, stress-free transport for all animals. Delivery fees vary by distance.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Can I visit the farm before purchasing?</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Absolutely! We encourage farm visits during our opening hours (Mon-Sat, 8am-6pm). See our facilities, meet the sows, and choose your piglets in person.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>What health guarantees do you offer?</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p>All our piglets come with a health record showing vaccinations and deworming. We stand behind the health of our animals and offer guidance for their first month with you.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Do you provide training for new farmers?</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, we offer hands-on training covering feeding, housing, disease prevention, and breeding management. Sessions can be arranged at our farm or your location.</p>
-            </div>
-          </div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What breeds of pigs do you raise?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>We primarily raise Large White and Landrace crosses — well suited to Uganda's climate and known for excellent growth rates and mothering ability.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>At what age are piglets ready for sale?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Piglets are weaned at 8 weeks and ready at 10–12 weeks, fully vaccinated, dewormed and eating solid feed independently.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do you offer delivery services?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes — we deliver across Kamuli District and neighbouring areas with safe, low-stress transport. Fees vary by distance.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can I visit the farm before purchasing?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Absolutely. Visit during opening hours (Mon–Sat), see the facilities, meet the sows and choose your piglets in person.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What health guarantees do you offer?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Every piglet comes with a health record of vaccinations and deworming, plus our guidance through its first month with you.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do you provide training for new farmers?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes — hands-on training on feeding, housing, disease prevention and breeding management, at our farm or yours.</p></div></div>
         </div>
       </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section id="contact" class="section-card" aria-labelledby="contact-heading">
+    <section id="contact" class="section-card contact-section" aria-labelledby="contact-heading">
       <div class="container">
-        <span class="section-badge" data-reveal="up">Connect With Us</span>
-        <h2 class="section-title" data-reveal="up"><i class="fas fa-address-card"></i> Contact Us</h2>
+        <span class="section-badge">Connect With Us</span>
+        <h2 id="contact-heading" class="section-title">Contact Us</h2>
         <div class="contact-wrapper">
-          <div class="contact-info" data-reveal="left">
+          <div class="contact-info">
             <p><i class="fas fa-map-marker-alt"></i> <strong>Kamuli District, Uganda</strong> — along the Jinja–Kamuli road, 2 km from town centre.</p>
             <p><i class="fas fa-phone"></i> <a href="tel:+256743804940">+256 743 804 940</a></p>
             <p><i class="fas fa-envelope"></i> <a href="mailto:avorapigfarming@gmail.com">avorapigfarming@gmail.com</a></p>
@@ -387,23 +273,16 @@
               <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
               <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://wa.me/256743804940" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+              <a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
           </div>
-          <div class="contact-extra" data-reveal="right">
+          <div class="contact-extra">
             <div class="contact-hours">
               <i class="fas fa-clock"></i>
-              <div>
-                <strong>Opening Hours</strong>
-                <p>Mon–Sat: 7:00 am – 5:00 pm</p>
-                <span style="font-size:0.9rem;color:#888;">Sunday: closed for farm rest</span>
-              </div>
+              <div><strong>Opening Hours</strong><p>Mon–Sat: 7:00 am – 5:00 pm</p><span class="muted">Sunday: closed for farm rest</span></div>
             </div>
-            <div class="contact-quote">
-              <i class="fas fa-star"></i>
-              <p>"Healthy pigs, better farming, greater future."</p>
-            </div>
-            <a href="https://wa.me/256743804940" class="cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp us now</a>
+            <div class="contact-quote"><i class="fas fa-star"></i><p>"Healthy pigs, better farming, greater future."</p></div>
+            <a href="https://wa.me/256743804940" target="_blank" rel="noopener" class="cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp us now</a>
           </div>
         </div>
       </div>
@@ -416,7 +295,7 @@
     <div class="footer-grid">
       <div class="footer-about">
         <div class="footer-brand"><i class="fas fa-piggy-bank"></i> AVORA <span>Pig Farming</span></div>
-        <p>Healthy pigs, better farming, greater future. We are committed to raising healthy, high-quality pigs using modern and sustainable farming practices in Kamuli District, Uganda.</p>
+        <p>Healthy pigs, better farming, greater future. Raising high-quality pigs with modern, sustainable practices in Kamuli District, Uganda.</p>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
@@ -424,26 +303,24 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Pigs For Sale</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h4>Contact Us</h4>
+        <h4>Contact</h4>
         <p><i class="fas fa-phone"></i> +256 743 804 940</p>
         <p><i class="fas fa-envelope"></i> avorapigfarming@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Kamuli District, Uganda</p>
         <p><i class="fas fa-clock"></i> Mon – Sat: 7:00 AM – 5:00 PM</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 AVORA PIG FARMING. All Rights Reserved. Designed with <span class="heart">❤️</span> in Uganda</p>
-    </div>
+    <div class="footer-bottom"><p>© 2026 AVORA Pig Farming. All rights reserved. Designed with <span class="heart">❤️</span> in Uganda</p></div>
   </footer>
 
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- JavaScript -->
+  <a class="whatsapp-float" href="https://wa.me/256743804940" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
   <script src="script.js"></script>
 </body>
 </html>
