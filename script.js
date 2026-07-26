@@ -22,11 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => loadingScreen.classList.add('hidden'), 250);
       }, 400);
     });
-    // Fallback in case 'load' already fired
     setTimeout(() => loadingScreen.classList.add('hidden'), 3500);
   }
 
-  /* ============ SCROLL PROGRESS (walking pig) ============ */
+  /* ============ SCROLL PROGRESS ============ */
   const progressFill = document.getElementById('scroll-progress-fill');
   const progressPig = document.getElementById('scroll-progress-pig');
   function updateProgress() {
@@ -39,7 +38,28 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
-  /* ============ BACKGROUND VIDEOS (hero + journey) ============ */
+  /* ============ PARALLAX BACKGROUND EFFECTS ============ */
+  const bgPhotos = document.querySelectorAll('.section-bg-soft > .bg-photo-wrap .bg-photo');
+  function updateParallax() {
+    const scrollTop = window.scrollY;
+    bgPhotos.forEach(bg => {
+      const section = bg.closest('.section-bg-soft');
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      const sectionTop = rect.top + scrollTop;
+      
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        const yPos = (scrollTop - sectionTop) * 0.2;
+        bg.style.transform = `scale(1.1) translateY(${yPos}px)`;
+      }
+    });
+  }
+  if (!reduceMotion && bgPhotos.length) {
+    window.addEventListener('scroll', updateParallax, { passive: true });
+    updateParallax();
+  }
+
+  /* ============ BACKGROUND VIDEOS ============ */
   const bgVideos = document.querySelectorAll('.bg-video');
   if (bgVideos.length) {
     if (reduceMotion) {
@@ -149,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navSections.forEach(section => navObserver.observe(section));
   }
 
-  /* ============ BUTTON RIPPLE + MAGNETIC PULL ============ */
+  /* ============ BUTTON RIPPLE ============ */
   document.querySelectorAll('.btn-primary, .btn-secondary, .cta-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const rect = btn.getBoundingClientRect();
@@ -162,16 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.appendChild(ripple);
       setTimeout(() => ripple.remove(), 650);
     });
-
-    if (!reduceMotion) {
-      btn.addEventListener('mousemove', (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = (e.clientX - rect.left - rect.width / 2) * 0.15;
-        const y = (e.clientY - rect.top - rect.height / 2) * 0.25;
-        btn.style.transform = `translate(${x}px, ${y}px)`;
-      });
-      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-    }
   });
 
   /* ============ GALLERY LIGHTBOX ============ */
@@ -211,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
   }
 
-  /* ============ SERVICE CARD SPOTLIGHT + TILT ============ */
+  /* ============ SERVICE CARD TILT ============ */
   const cards = document.querySelectorAll('.service-card');
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -261,7 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startAuto();
   }
 
-
   /* ============ FAQ ACCORDION ============ */
   const faqQuestions = document.querySelectorAll('.faq-question');
   faqQuestions.forEach(question => {
@@ -269,13 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const isExpanded = question.getAttribute('aria-expanded') === 'true';
       const faqItem = question.closest('.faq-item');
       
-      // Close all other items
       faqQuestions.forEach(q => {
         q.setAttribute('aria-expanded', 'false');
         q.closest('.faq-item').classList.remove('active');
       });
       
-      // Toggle current item
       if (!isExpanded) {
         question.setAttribute('aria-expanded', 'true');
         faqItem.classList.add('active');
@@ -368,6 +375,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    const pricingGrid = document.querySelector('.pricing-grid');
+    if (pricingGrid) {
+      gsap.from('.pricing-card', {
+        opacity: 0, y: 50, duration: 0.8, stagger: 0.12, ease: 'power3.out',
+        scrollTrigger: { trigger: pricingGrid, start: 'top 85%' }
+      });
+    }
+
+    const faqGrid = document.querySelector('.faq-grid');
+    if (faqGrid) {
+      gsap.from('.faq-item', {
+        opacity: 0, y: 30, duration: 0.6, stagger: 0.08, ease: 'power3.out',
+        scrollTrigger: { trigger: faqGrid, start: 'top 88%' }
+      });
+    }
+
+    // Parallax on background wraps
     document.querySelectorAll('.bg-photo-wrap').forEach(wrap => {
       const container = wrap.closest('header, section');
       if (!container) return;
@@ -383,10 +407,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   } else {
-    // No GSAP / reduced motion: make sure reveal targets are simply visible
     document.querySelectorAll('[data-reveal]').forEach(el => {
       el.style.opacity = 1;
     });
   }
 
+  console.log('🐖 AVORA PIG FARMING — healthy pigs, trusted farming.');
 });
