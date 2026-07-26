@@ -59,21 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     updateParallax();
   }
 
-  /* ============ BACKGROUND VIDEOS ============ */
-  const bgVideos = document.querySelectorAll('.bg-video');
-  if (bgVideos.length) {
-    if (reduceMotion) {
-      bgVideos.forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
-    } else {
-      const videoObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.play().catch(() => {});
-          else entry.target.pause();
-        });
-      }, { threshold: 0.15 });
-      bgVideos.forEach(v => { videoObserver.observe(v); v.play().catch(() => {}); });
-    }
-  }
+  /* ============ BACKGROUND VIDEOS (disabled - using static images instead) ============ */
+  // Videos replaced with static images for GitHub Pages compatibility
 
   /* ============ PARTICLES ============ */
   const particleContainer = document.getElementById('particles');

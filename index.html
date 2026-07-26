@@ -34,9 +34,7 @@
   <!-- ===== HEADER with hero image ===== -->
   <header class="main-header">
     <div class="bg-photo-wrap">
-      <video class="bg-video" autoplay muted loop playsinline poster="images/pig1.jpg">
-        <source src="images/pig-video.mp4" type="video/mp4">
-      </video>
+      <div class="bg-photo hero-zoom" style="background-image: url('images/pig1.jpg');"></div>
     </div>
     <div class="header-overlay"></div>
     <div class="particles" id="particles"></div>
@@ -89,12 +87,11 @@
   <main id="main-content">
 
     <!-- ===== ABOUT ===== -->
-    <section id="about" class="section-card section-bg-soft">
+    <section id="about" class="section-card timeline-media">
       <div class="bg-photo-wrap">
         <div class="bg-photo" style="background-image: url('images/pig3.jpg');"></div>
       </div>
-      <div class="bg-photo-fade"></div>
-      <div class="bg-shape" style="width:340px;height:340px;background:var(--terracotta);top:-60px;right:-100px;"></div>
+      <div class="media-overlay"></div>
       <div class="container">
         <div class="about-grid">
           <div class="about-text" data-reveal="left">
@@ -125,9 +122,7 @@
     <!-- ===== JOURNEY / TIMELINE ===== -->
     <section id="journey" class="section-card timeline-section timeline-media">
       <div class="bg-photo-wrap">
-        <video class="bg-video" autoplay muted loop playsinline poster="images/pig6.jpg">
-          <source src="images/pigs-video.mp4" type="video/mp4">
-        </video>
+        <div class="bg-photo" style="background-image: url('images/pig6.jpg');"></div>
       </div>
       <div class="media-overlay"></div>
       <div class="container">
@@ -158,13 +153,12 @@
       </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
-    <section id="services" class="section-card section-bg-soft" aria-labelledby="services-heading">
+    <!-- ===== SERVICES - FIXED: Now uses timeline-media ===== -->
+    <section id="services" class="section-card timeline-media" aria-labelledby="services-heading">
       <div class="bg-photo-wrap">
         <div class="bg-photo" style="background-image: url('images/pig2.jpg');"></div>
       </div>
-      <div class="bg-photo-fade"></div>
-      <div class="bg-shape" style="width:280px;height:280px;background:var(--gold);bottom:-40px;left:-80px;animation-delay:-6s;"></div>
+      <div class="media-overlay"></div>
       <div class="container">
         <span class="section-badge" data-reveal="up">What We Offer</span>
         <h2 class="section-title" data-reveal="up"><i class="fas fa-seedling"></i> Our Services</h2>
@@ -198,11 +192,11 @@
     </section>
 
     <!-- ===== PRICING ===== -->
-    <section id="pricing" class="section-card section-bg-soft">
+    <section id="pricing" class="section-card timeline-media">
       <div class="bg-photo-wrap">
         <div class="bg-photo" style="background-image: url('images/pig4.jpg');"></div>
       </div>
-      <div class="bg-photo-fade"></div>
+      <div class="media-overlay"></div>
       <div class="container">
         <span class="section-badge" data-reveal="up">Our Prices</span>
         <h2 id="pricing-heading" class="section-title" data-reveal="up"><i class="fas fa-tags" aria-hidden="true"></i> Pricing</h2>
@@ -270,7 +264,11 @@
     </section>
 
     <!-- ===== GALLERY ===== -->
-    <section id="gallery" class="section-card section-bg-soft" aria-labelledby="gallery-heading">
+    <section id="gallery" class="section-card timeline-media" aria-labelledby="gallery-heading">
+      <div class="bg-photo-wrap">
+        <div class="bg-photo" style="background-image: url('images/pig7.jpg');"></div>
+      </div>
+      <div class="media-overlay"></div>
       <div class="container">
         <span class="section-badge" data-reveal="up">Our Farm</span>
         <h2 class="section-title" data-reveal="up"><i class="fas fa-images"></i> Gallery</h2>
@@ -319,12 +317,12 @@
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
-    <section id="faq" class="section-card section-bg-soft" aria-labelledby="faq-heading">
+    <!-- ===== FAQ - FIXED: Now uses timeline-media ===== -->
+    <section id="faq" class="section-card timeline-media" aria-labelledby="faq-heading">
       <div class="bg-photo-wrap">
         <div class="bg-photo" style="background-image: url('images/pig7.jpg');"></div>
       </div>
-      <div class="bg-photo-fade"></div>
+      <div class="media-overlay"></div>
       <div class="container">
         <span class="section-badge" data-reveal="up">Common Questions</span>
         <h2 class="section-title" data-reveal="up"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
@@ -388,11 +386,11 @@
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section id="contact" class="section-card section-bg-soft" aria-labelledby="contact-heading">
+    <section id="contact" class="section-card timeline-media" aria-labelledby="contact-heading">
       <div class="bg-photo-wrap">
         <div class="bg-photo" style="background-image: url('images/pig8.jpg');"></div>
       </div>
-      <div class="bg-photo-fade"></div>
+      <div class="media-overlay"></div>
       <div class="container">
         <span class="section-badge" data-reveal="up">Connect With Us</span>
         <h2 class="section-title" data-reveal="up"><i class="fas fa-address-card"></i> Get in Touch</h2>
